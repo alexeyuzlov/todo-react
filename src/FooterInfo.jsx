@@ -1,0 +1,9 @@
+export function FooterInfo() {
+    return (
+        <footer className="info">
+            <p>Double-click to edit a todo</p>
+            <p>Written by <a href="http://evanyou.me">Evan You</a></p>
+            <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+        </footer>
+    );
+}
