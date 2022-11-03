@@ -1,13 +1,13 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getAll, save } from './store';
 
-function App() {
-    const filters = {
-        all: todos => todos,
-        active: todos => todos.filter(todo => !todo.completed),
-        completed: todos => todos.filter(todo => todo.completed)
-    };
+const filters = {
+    all: todos => todos,
+    active: todos => todos.filter(todo => !todo.completed),
+    completed: todos => todos.filter(todo => todo.completed)
+};
 
+function App() {
     const [newTodo, setNewTodo] = useState('');
     const [allDone, setAllDone] = useState(false);
     const [todos, setTodos] = useState(getAll());
